@@ -14,5 +14,5 @@ RUN groupadd devuser -g 1000
 RUN useradd -g 1000 -u 1000 devuser
 ENV HOME /home/devuser
 
-RUN mkdir /workspace
-RUN chown devuser /workspace
+RUN mkdir /workspaces
+RUN chown devuser /workspaces
