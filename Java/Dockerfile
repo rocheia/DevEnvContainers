@@ -7,4 +7,4 @@ RUN yum install -y java-17-amazon-corretto-devel && yum clean all
 RUN yum install -y maven && yum clean all
 
 # Install git
-RUN yum install -y git && git clean all
+RUN yum install -y git && yum clean all
