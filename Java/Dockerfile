@@ -15,4 +15,4 @@ RUN useradd -g 1000 -u 1000 devuser
 ENV HOME /home/devuser
 
 RUN mkdir /workspace
-RUN chown /workspace devuser
+RUN chown devuser /workspace
