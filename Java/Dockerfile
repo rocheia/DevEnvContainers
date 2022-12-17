@@ -8,10 +8,3 @@ RUN yum install -y maven && yum clean all
 
 # Install git
 RUN yum install -y git && yum clean all
-
-
-# Add local user and switch to local account (not root)
-RUN yum install -y shadow-utils && yum clean all
-RUN adduser dev_user
-RUN chown -R dev_user /workspaces 
-USER dev_user
