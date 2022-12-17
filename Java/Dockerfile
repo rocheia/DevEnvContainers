@@ -10,5 +10,8 @@ RUN yum install -y maven && yum clean all
 RUN yum install -y git && yum clean all
 
 # Add local user and switch to local account (not root)
-RUN yum install -y shadow-utils && yum clean all
-RUN adduser dev_user
+RUN groupadd devuser -g 1000
+RUN useradd -g 1000 -u 1000 devuser
+ENV HOME /home/devuser
+
+USER devuser
